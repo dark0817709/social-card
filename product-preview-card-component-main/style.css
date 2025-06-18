@@ -1,0 +1,151 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --darker-cyan: hsl(158, 42%, 18%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  max-width: 37.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  background-image: url('image-product-mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 15rem;
+}
+
+.card__content {
+  padding: 1.5rem;
+}
+
+.category {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--dark-grayish-blue);
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: 'Fraunces', serif;
+  color: var(--very-dark-blue);
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--dark-grayish-blue);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.current-price {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  color: var(--dark-cyan);
+}
+
+.original-price {
+  color: var(--dark-grayish-blue);
+  font-size: 0.875rem;
+  text-decoration: line-through;
+}
+
+.add-to-cart {
+  width: 100%;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: var(--darker-cyan);
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Desktop styles */
+@media (min-width: 40em) {
+  .card {
+    flex-direction: row;
+  }
+  
+  .card__image {
+    background-image: url('image-product-desktop.jpg');
+    flex: 1;
+    min-height: auto;
+  }
+  
+  .card__content {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .category {
+    margin-bottom: 1.25rem;
+  }
+  
+  .title {
+    margin-bottom: 1.5rem;
+  }
+  
+  .description {
+    margin-bottom: 1.75rem;
+  }
+  
+  .price {
+    margin-bottom: 1.75rem;
+  }
+}
